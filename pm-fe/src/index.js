@@ -355,7 +355,7 @@ function renderTable(data) {
         const btnTxt = document.createTextNode('view detail');
         btn.appendChild(btnTxt);
         btn.addEventListener('click', (e) => {
-            location.href = 'product-detail.html';
+            location.href = `product-detail.html?id=${el.id}`;
         });
         btnElement.appendChild(btn);
 
