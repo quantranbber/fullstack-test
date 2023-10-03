@@ -324,6 +324,8 @@ function goTo(currentPage, nextPage, totalPage) {
 function renderTable(data) {
     const table = document.getElementById('products');
     table.innerHTML = '';
+
+    renderTableTitle(table);
     data.forEach((el) => {
         const childElement = document.createElement('tr');
 
@@ -451,6 +453,7 @@ async function search() {
     const pages = document.getElementById('pages');
     table.innerHTML = '';
     pages.innerHTML = '';
+    renderTableTitle(table);
     let url = `${BACKEND_URL}/products?page=${0}&pageSize=${DEFAULT_PAGE_SIZE}`;
     const productName = document.getElementById('productName').value;
     const categoryName = document.getElementById('categoryName').value;
@@ -468,6 +471,37 @@ async function search() {
         renderTable(resp.data.data);
         renderPaginationBar(totalPage);
     }
+}
+
+function renderTableTitle(table) {
+    const tr = document.createElement('tr');
+    const id = document.createElement('th');
+    const idTxt = document.createTextNode('#');
+    const name = document.createElement('th');
+    const nameTxt = document.createTextNode('PRODUCT NAME');
+    const desc = document.createElement('th');
+    const descTxt = document.createTextNode('DESCRIPTION');
+    const cat = document.createElement('th');
+    const catTxt = document.createTextNode('CATEGORY');
+    const button = document.createElement('th');
+
+    id.appendChild(idTxt);
+    name.appendChild(nameTxt);
+    desc.appendChild(descTxt);
+    cat.appendChild(catTxt);
+
+    id.classList.add('title');
+    name.classList.add('title');
+    desc.classList.add('title');
+    cat.classList.add('title');
+
+    tr.appendChild(id);
+    tr.appendChild(name);
+    tr.appendChild(desc);
+    tr.appendChild(cat);
+    tr.appendChild(button);
+
+    table.appendChild(tr);
 }
 
 async function initProductDetail() {
