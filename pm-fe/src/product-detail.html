@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="initProductDetail()">
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th class="title">#</th>
+                <th><p id="id"></p></th>
+            </tr>
+            <tr>
+                <th class="title">PRODUCT NAME</th>
+                <th><p id="name"></p></th>
+            </tr>
+            <tr>
+                <th class="title">DESCRIPTION</th>
+                <th><p id="description"></p></th>
+            </tr>
+            <tr>
+                <th class="title">CATEGORY</th>
+                <th><p id="category"></p></th>
+            </tr>
+            <tr>
+                <th class="title">PRICE</th>
+                <th><p id="price"></p></th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="common.js"></script>
+<script src="index.js"></script>
+</html>

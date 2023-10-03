@@ -1,0 +1,1 @@
+aws s3 sync src/  s3://pm-bucket-deployment --exclude "backend/*" --delete --acl public-read

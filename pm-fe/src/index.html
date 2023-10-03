@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="search-box">
+            <table class="table" id="search-tbl">
+                <tr>
+                    <td class="title">PRODUCT NAME:</td>
+                    <td class="input">
+                        <input id="productName" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">CATEGORY:</td>
+                    <td class="input">
+                        <input id="categoryName" type="text">
+                    </td>
+                </tr>
+            </table>
+            <div class="search-btn">
+                <button id="search-btn" class="nav-text" onclick="search()">SEARCH</button>
+            </div>
+        </div>
+        <table class="table" id="products">
+            <tr>
+                <th class="title">#</th>
+                <th class="title">PRODUCT NAME</th>
+                <th class="title">DESCRIPTION</th>
+                <th class="title">CATEGORY</th>
+                <th></th>
+            </tr>
+        </table>
+        <div class="pagination">
+            <button class="arrow" id="prevPage" onclick="prev()">← <span class="nav-text">PREV</span></button>
+            <div class="pages" id="pages"></div>
+            <button class="arrow" id="nextPage" onclick="next()"><span class="nav-text">NEXT</span> →</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="common.js"></script>
+<script src="index.js"></script>
+</html>

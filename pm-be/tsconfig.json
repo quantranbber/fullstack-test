@@ -1,0 +1,34 @@
+{
+  "collection": "@nestjs/schematics",
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@configs/*": ["src/configs/*"],
+      "@core/*": ["src/core/*"],
+      "@decorators/*": ["src/decorators/*"],
+      "@entities/*": ["src/entities/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@modules/*": ["src/modules/*"],
+      "@src/*": ["src/*"]
+    }
+  }
+}

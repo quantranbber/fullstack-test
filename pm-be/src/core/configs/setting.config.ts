@@ -1,0 +1,3 @@
+export const setting = {
+  TYPEORM_CUSTOM_REPOSITORY: 'TYPEORM_CUSTOM_REPOSITORY',
+};
